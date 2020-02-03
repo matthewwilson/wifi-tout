@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7228F40723E86EDB009D20B7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228F40623E86EDB009D20B7 /* Reachability.swift */; };
 		72C33EA423E0C4DD00A94D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C33EA323E0C4DD00A94D03 /* AppDelegate.swift */; };
 		72C33EA623E0C4DD00A94D03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C33EA523E0C4DD00A94D03 /* ContentView.swift */; };
 		72C33EA823E0C4DE00A94D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C33EA723E0C4DE00A94D03 /* Assets.xcassets */; };
 		72C33EAB23E0C4DE00A94D03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72C33EAA23E0C4DE00A94D03 /* Preview Assets.xcassets */; };
 		72C33EAE23E0C4DE00A94D03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72C33EAC23E0C4DE00A94D03 /* Main.storyboard */; };
-		72C33EB723E0CB1100A94D03 /* HttpPinger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C33EB623E0CB1100A94D03 /* HttpPinger.swift */; };
 		72C33EB923E0CE1100A94D03 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C33EB823E0CE1100A94D03 /* NotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7228F40623E86EDB009D20B7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		72C33EA023E0C4DD00A94D03 /* wifi-tout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wifi-tout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C33EA323E0C4DD00A94D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72C33EA523E0C4DD00A94D03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		72C33EAD23E0C4DE00A94D03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72C33EAF23E0C4DE00A94D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C33EB023E0C4DE00A94D03 /* wifi_tout.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wifi_tout.entitlements; sourceTree = "<group>"; };
-		72C33EB623E0CB1100A94D03 /* HttpPinger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPinger.swift; sourceTree = "<group>"; };
 		72C33EB823E0CE1100A94D03 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +61,8 @@
 			children = (
 				72C33EA323E0C4DD00A94D03 /* AppDelegate.swift */,
 				72C33EA523E0C4DD00A94D03 /* ContentView.swift */,
-				72C33EB623E0CB1100A94D03 /* HttpPinger.swift */,
 				72C33EB823E0CE1100A94D03 /* NotificationService.swift */,
+				7228F40623E86EDB009D20B7 /* Reachability.swift */,
 				72C33EA723E0C4DE00A94D03 /* Assets.xcassets */,
 				72C33EAC23E0C4DE00A94D03 /* Main.storyboard */,
 				72C33EAF23E0C4DE00A94D03 /* Info.plist */,
@@ -154,7 +154,7 @@
 				72C33EB923E0CE1100A94D03 /* NotificationService.swift in Sources */,
 				72C33EA623E0C4DD00A94D03 /* ContentView.swift in Sources */,
 				72C33EA423E0C4DD00A94D03 /* AppDelegate.swift in Sources */,
-				72C33EB723E0CB1100A94D03 /* HttpPinger.swift in Sources */,
+				7228F40723E86EDB009D20B7 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +302,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "so.mwil.wifi-tout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -326,7 +326,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "so.mwil.wifi-tout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
