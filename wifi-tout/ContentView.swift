@@ -15,7 +15,6 @@ struct ContentView: View {
     private let notificationService = NotificationService()
     private let timer = Timer.publish(every: 20, on: .main, in: .common).autoconnect()
 
-
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
             createStatusText()
@@ -54,7 +53,6 @@ struct ContentView: View {
         }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
