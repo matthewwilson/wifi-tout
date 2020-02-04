@@ -14,26 +14,45 @@ struct ContentView: View {
     private let reachability = Reachability()
     private let notificationService = NotificationService()
     private let timer = Timer.publish(every: 20, on: .main, in: .common).autoconnect()
-    
+
     var body: some View {
+        VStack(alignment: .center, spacing: 5) {
+            createStatusText()
+            createExitButton()
+        }.frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(3)
+    }
+
+    private func createStatusText() -> some View {
         Text("\(status)")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .onReceive(timer) { _ in
-                print("Tick")
-                if (self.reachability.isConnectedToNetwork()) {
-                    self.status = "Connected to WiFi"
-                    self.connectionFailureDetected = false
-                } else {
-                    self.status = "Not connected to WiFi"
-                    if !self.connectionFailureDetected {
-                        self.notificationService.emitWifiDownNotification()
-                        self.connectionFailureDetected = true
-                    }
+                .onReceive(timer) { _ in
+                    self.onNextReachabilityTick()
                 }
+    }
+
+    private func onNextReachabilityTick() {
+        print("Tick")
+        if (self.reachability.isConnectedToNetwork()) {
+            self.status = "Connected to WiFi"
+            self.connectionFailureDetected = false
+        } else {
+            self.status = "Not connected to WiFi"
+            if !self.connectionFailureDetected {
+                self.notificationService.emitWifiDownNotification()
+                self.connectionFailureDetected = true
             }
+        }
+    }
+
+    private func createExitButton() -> some View {
+        Button(action: {
+            NSApplication.shared.terminate(self)
+        }) {
+            Text("Quit Wifi-tout?")
+                    .foregroundColor(.white)
+        }
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
