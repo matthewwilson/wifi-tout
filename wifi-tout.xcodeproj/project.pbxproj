@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694ED7271B020C1B66981983 /* DateTimeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694ED22AA68220FCF2FEDB36 /* DateTimeFactory.swift */; };
+		694EDE38C5D934BCC74A73D8 /* LocaleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694EDDED8BC6523C29F2806D /* LocaleProvider.swift */; };
 		7228F40723E86EDB009D20B7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228F40623E86EDB009D20B7 /* Reachability.swift */; };
 		72C33EA423E0C4DD00A94D03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C33EA323E0C4DD00A94D03 /* AppDelegate.swift */; };
 		72C33EA623E0C4DD00A94D03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C33EA523E0C4DD00A94D03 /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		694ED22AA68220FCF2FEDB36 /* DateTimeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeFactory.swift; sourceTree = "<group>"; };
+		694EDDED8BC6523C29F2806D /* LocaleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleProvider.swift; sourceTree = "<group>"; };
 		7228F40623E86EDB009D20B7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		72C33EA023E0C4DD00A94D03 /* wifi-tout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wifi-tout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C33EA323E0C4DD00A94D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 				72C33EAF23E0C4DE00A94D03 /* Info.plist */,
 				72C33EB023E0C4DE00A94D03 /* wifi_tout.entitlements */,
 				72C33EA923E0C4DE00A94D03 /* Preview Content */,
+				694ED22AA68220FCF2FEDB36 /* DateTimeFactory.swift */,
+				694EDDED8BC6523C29F2806D /* LocaleProvider.swift */,
 			);
 			path = "wifi-tout";
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 				72C33EA623E0C4DD00A94D03 /* ContentView.swift in Sources */,
 				72C33EA423E0C4DD00A94D03 /* AppDelegate.swift in Sources */,
 				7228F40723E86EDB009D20B7 /* Reachability.swift in Sources */,
+				694ED7271B020C1B66981983 /* DateTimeFactory.swift in Sources */,
+				694EDE38C5D934BCC74A73D8 /* LocaleProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +301,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"wifi-tout/Preview Content\"";
-				DEVELOPMENT_TEAM = NQR363YYF4;
+				DEVELOPMENT_TEAM = PD5QMARB3X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "wifi-tout/Info.plist";
@@ -317,7 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"wifi-tout/Preview Content\"";
-				DEVELOPMENT_TEAM = NQR363YYF4;
+				DEVELOPMENT_TEAM = PD5QMARB3X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "wifi-tout/Info.plist";

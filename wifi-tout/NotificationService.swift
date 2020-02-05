@@ -9,13 +9,17 @@
 import Foundation
 import UserNotifications
 
+
 class NotificationService {
-    
+
+    private let dateTimeFactory = DateTimeFactory()
+
     func emitWifiDownNotification() {
         print("emitting notification")
         let content = UNMutableNotificationContent()
+        let contentBody = "Was unable to reach the internet at " + dateTimeFactory.getFormattedDate()
         content.title = "Wifi is down"
-        content.body = "Was unable to reach google.com"
+        content.body = contentBody
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
 
@@ -30,5 +34,4 @@ class NotificationService {
            }
         }
     }
-    
 }
