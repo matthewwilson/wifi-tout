@@ -28,6 +28,7 @@ struct ContentView: View {
                 .onReceive(timer) { _ in
                     self.onNextReachabilityTick()
                 }
+        .fixedSize(horizontal: true, vertical: false)
     }
 
     private func onNextReachabilityTick() {
