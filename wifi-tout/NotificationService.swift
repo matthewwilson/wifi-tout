@@ -9,29 +9,35 @@
 import Foundation
 import UserNotifications
 
-
 class NotificationService {
 
     private let dateTimeFactory = DateTimeFactory()
+    private let eventLogger = EventLogger()
 
     func emitWifiDownNotification() {
-        print("emitting notification")
-        let content = UNMutableNotificationContent()
-        let contentBody = "Was unable to reach the internet at " + dateTimeFactory.getFormattedDate()
-        content.title = "Wifi is down"
-        content.body = contentBody
+        print("Emitting wifi interrupted notification")
+        eventLogger.logWifiTouting()
 
+        let notificationContent = buildNotificationContent()
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: notificationContent, trigger: trigger)
 
-        let uuidString = UUID().uuidString
-        let request = UNNotificationRequest(identifier: uuidString, content: content, trigger: trigger)
+        dispatchNotification(with: request)
+    }
 
-        // Schedule the request with the system.
+    private func buildNotificationContent() -> UNMutableNotificationContent {
+        let content = UNMutableNotificationContent()
+        content.title = "WiFi interrupted"
+        content.body = "Was unable to reach the internet at " + dateTimeFactory.getFormattedTime()
+        return content
+    }
+
+    private func dispatchNotification(with request: UNNotificationRequest) {
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.add(request) { (error) in
-           if error != nil {
-            print("\(error!.localizedDescription)")
-           }
+            if error != nil {
+                print("\(error!.localizedDescription)")
+            }
         }
     }
 }

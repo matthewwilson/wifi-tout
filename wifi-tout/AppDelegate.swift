@@ -13,12 +13,14 @@ import UserNotifications
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var window: NSWindow!
-    var popover: NSPopover!
-    var statusBarItem: NSStatusItem!
+    private var window: NSWindow!
+    private var popover: NSPopover!
+    private var statusBarItem: NSStatusItem!
+    private let eventLogger = EventLogger()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
+        eventLogger.logAppStartup()
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound]) { granted, error in
             // Enable or disable features based on authorization.
@@ -45,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        eventLogger.logAppTerminated()
     }
     
     @objc func togglePopover(_ sender: AnyObject?) {

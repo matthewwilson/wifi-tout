@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var status = "Connected to WiFi"
     private let reachability = Reachability()
     private let notificationService = NotificationService()
-    private let timer = Timer.publish(every: 20, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
 
     var body: some View {
         VStack(alignment: .center, spacing: 5) {
@@ -49,7 +49,7 @@ struct ContentView: View {
         Button(action: {
             NSApplication.shared.terminate(self)
         }) {
-            Text("Quit Wifi-tout?")
+            Text("Quit WiFi-tout")
                     .foregroundColor(.white)
         }
     }
