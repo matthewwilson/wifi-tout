@@ -9,13 +9,14 @@ class DateTimeFactory {
 
     private let dateFormatter = DateFormatter()
     private let localeProvider = LocaleProvider()
+    private let twentyFourHourFormat = "HH:mm"
 
-    private let dateTimeFormatMedium = "MMM d, h:mm a"
-
-    func getFormattedDate() -> String {
+    func getFormattedTime() -> String {
         let timestamp = Date()
+
+        dateFormatter.dateStyle = .none
+        dateFormatter.timeStyle = .short
         dateFormatter.locale = localeProvider.getUserLocale()
-        dateFormatter.dateFormat = dateTimeFormatMedium
 
         return dateFormatter.string(from: timestamp)
     }

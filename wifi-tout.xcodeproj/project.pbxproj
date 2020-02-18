@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694ED5DAC7011ED77E206E97 /* EventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694EDE01FEB918FE9212E81C /* EventLogger.swift */; };
 		694ED7271B020C1B66981983 /* DateTimeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694ED22AA68220FCF2FEDB36 /* DateTimeFactory.swift */; };
 		694EDE38C5D934BCC74A73D8 /* LocaleProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694EDDED8BC6523C29F2806D /* LocaleProvider.swift */; };
 		7228F40723E86EDB009D20B7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228F40623E86EDB009D20B7 /* Reachability.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		694ED22AA68220FCF2FEDB36 /* DateTimeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTimeFactory.swift; sourceTree = "<group>"; };
 		694EDDED8BC6523C29F2806D /* LocaleProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleProvider.swift; sourceTree = "<group>"; };
+		694EDE01FEB918FE9212E81C /* EventLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventLogger.swift; sourceTree = "<group>"; };
 		7228F40623E86EDB009D20B7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		72C33EA023E0C4DD00A94D03 /* wifi-tout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "wifi-tout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C33EA323E0C4DD00A94D03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				72C33EA923E0C4DE00A94D03 /* Preview Content */,
 				694ED22AA68220FCF2FEDB36 /* DateTimeFactory.swift */,
 				694EDDED8BC6523C29F2806D /* LocaleProvider.swift */,
+				694EDE01FEB918FE9212E81C /* EventLogger.swift */,
 			);
 			path = "wifi-tout";
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 				7228F40723E86EDB009D20B7 /* Reachability.swift in Sources */,
 				694ED7271B020C1B66981983 /* DateTimeFactory.swift in Sources */,
 				694EDE38C5D934BCC74A73D8 /* LocaleProvider.swift in Sources */,
+				694ED5DAC7011ED77E206E97 /* EventLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +302,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "wifi-tout/wifi_tout.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"wifi-tout/Preview Content\"";
@@ -322,6 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "wifi-tout/wifi_tout.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"wifi-tout/Preview Content\"";
